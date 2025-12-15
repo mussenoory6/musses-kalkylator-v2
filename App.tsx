@@ -71,10 +71,10 @@ const App: React.FC = () => {
       <header className="bg-white border-b border-slate-200 sticky top-0 z-10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <div className="bg-indigo-600 p-2 rounded-lg text-white">
+            <div className="bg-red-600 p-2 rounded-lg text-white">
               <Calculator size={24} />
             </div>
-            <h1 className="text-xl font-bold text-slate-900">Musses Kalkylator</h1>
+            <h1 className="text-xl font-bold text-slate-900">Noory Solution Kalkylator</h1>
           </div>
           <div className="text-sm text-slate-500 hidden sm:block">
             Ekonomisk översikt och provisionsberäkning
@@ -103,6 +103,7 @@ const App: React.FC = () => {
                   min={1}
                   max={100}
                   step={1}
+                  showInlineValue={false}
                 />
                 
                 <InputGroup
@@ -114,6 +115,7 @@ const App: React.FC = () => {
                   max={100000}
                   step={500}
                   suffix="kr"
+                  showInlineValue={false}
                 />
 
                 <InputGroup
@@ -125,6 +127,7 @@ const App: React.FC = () => {
                   max={20000}
                   step={100}
                   suffix="kr"
+                  showInlineValue={false}
                 />
 
                 <div className="grid grid-cols-2 gap-4">
@@ -136,6 +139,8 @@ const App: React.FC = () => {
                     min={1}
                     max={12}
                     suffix="mån"
+                    showInlineValue
+                    showNumberInput={false}
                   />
                   <InputGroup
                     label="Kundlivslängd"
@@ -145,6 +150,8 @@ const App: React.FC = () => {
                     min={1}
                     max={60}
                     suffix="mån"
+                    showInlineValue
+                    showNumberInput={false}
                   />
                 </div>
               </div>
